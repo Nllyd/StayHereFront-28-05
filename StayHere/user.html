@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+    <link rel="stylesheet" href="./styles/user.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <img id="header-image" src="./assets/StayPandaHere.png" alt="">
+    </header>
+
+    <!-- Contenedor de nombre, edad y número -->
+    <div class="container">
+        <div>
+            <p style="font-weight: bold;">Nombre</p>
+            <p>Edad</p>
+            <p>Número</p>
+        </div>
+        <!-- Círculo -->
+        <label for="file-upload" class="circle" id="circle"></label>
+        <label for="file-upload" id="upload-button">
+            <i class="bi bi-upload" id="upload-icon" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 3rem; color: #000000; z-index: 1; cursor: pointer;"></i> <!-- Icono de carga -->        
+        </label>
+        <input type="file" id="file-upload">
+    </div>
+
+    <!-- Sección de Opiniones -->
+    <p class="section-title">Opiniones</p>
+    <div class="slider-container">
+        <!-- Slider de comentarios -->
+        <div class="opinion-box">
+            <div style="display: flex; justify-content: space-between; align-items: center;"> 
+                <!-- Limita el tamaño a solo 20 caracteres -->
+                <p class="opinion-text" style="margin-right: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">Opinión #1</p>
+                <p class="opinion-text" style="margin-right: 10px;">4</p>
+                <i class="bi bi-star-fill star-icon"></i>
+            </div>
+        </div>
+
+        <!-- Añadir más comentarios aquí -->
+        <div class="opinion-box">
+            <div style="display: flex; justify-content: space-between; align-items: center;"> 
+                <!-- Limita el tamaño a solo 20 caracteres -->
+                <p class="opinion-text" style="margin-right: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">Opinión #2</p>
+                <p class="opinion-text" style="margin-right: 10px;">3</p>
+                <i class="bi bi-star-fill star-icon"></i>
+            </div>
+        </div>
+
+        <!-- Añadir más comentarios aquí -->
+        <div class="opinion-box">
+            <div style="display: flex; justify-content: space-between; align-items: center;"> 
+                <!-- Limita el tamaño a solo 20 caracteres -->
+                <p class="opinion-text" style="margin-right: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">Opinión #3</p>
+                <p class="opinion-text" style="margin-right: 10px;">5</p>
+                <i class="bi bi-star-fill star-icon"></i>
+            </div>
+        </div>
+
+        <!-- Añadir más comentarios aquí -->
+        <div class="opinion-box">
+            <div style="display: flex; justify-content: space-between; align-items: center;"> 
+                <!-- Limita el tamaño a solo 20 caracteres -->
+                <p class="opinion-text" style="margin-right: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">Opinión #3</p>
+                <p class="opinion-text" style="margin-right: 10px;">5</p>
+                <i class="bi bi-star-fill star-icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Cuartos ofrecidos -->
+    <p class="section-title">Cuartos ofrecidos</p>
+
+    <!-- Recuadro -->
+    <!-- Aqui deberian de  -->
+    <div class="col-4 card-margin">
+        <div class="card">
+            <div class="card-body">
+                <div class="photo" style="width: 100%; height: 150px; background-color: #f0f0f0; border-radius: 10px;"></div>
+                <h5 class="card-title">Nombre de la habitación</h5>
+                <p class="card-text">Ubicación: Santa Anita</p>
+                <p class="card-text">Precio: S/260</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- "Footer"-->
+    <footer>
+        Aquí va el contenido del footer.
+    </footer>
+
+    <!-- Script para inicializar el slider -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider-container').slick({
+                infinite: false,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                swipeToSlide: true
+            });
+        });
+    </script>
+</body>
+</html>
